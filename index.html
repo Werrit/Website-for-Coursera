@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <script src="gallery_javasript.js"></script>
     <header>
         <nav>
             <ul>
@@ -23,7 +22,68 @@
         <p>This is the home page of our website. The stylesheet is shared across all three pages and includes custom styling for various HTML elements including the body, header, navigation, main content area, footer, list items, headings, and paragraphs.</p>
         <p>Feel free to navigate through the different pages using the menu above. Each page demonstrates the consistent styling applied through our shared CSS file.</p>
     </main>
+        <h1>Interactive Image Gallery</h1>
+    
+    <div id="image">
+        Hover over an image below to display here.
+    </div>
 
+    <div class="gallery">
+        <img class="preview" 
+             alt="Autumn leaves in vibrant orange and red colors" 
+             src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop"
+             tabindex="0"
+             onmouseover="upDate(this)"
+             onmouseout="undo()"
+             onfocus="upDate(this)"
+             onblur="undo()">
+        
+        <img class="preview" 
+             alt="Mountain landscape with snow-capped peaks" 
+             src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop"
+             tabindex="0"
+             onmouseover="upDate(this)"
+             onmouseout="undo()"
+             onfocus="upDate(this)"
+             onblur="undo()">
+        
+        <img class="preview" 
+             alt="Ocean waves crashing on rocky shore" 
+             src="https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=400&h=300&fit=crop"
+             tabindex="0"
+             onmouseover="upDate(this)"
+             onmouseout="undo()"
+             onfocus="upDate(this)"
+             onblur="undo()">
+        
+        <img class="preview" 
+             alt="Desert landscape with sand dunes at sunset" 
+             src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=400&h=300&fit=crop"
+             tabindex="0"
+             onmouseover="upDate(this)"
+             onmouseout="undo()"
+             onfocus="upDate(this)"
+             onblur="undo()">
+        
+        <img class="preview" 
+             alt="Forest path with tall green trees" 
+             src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&h=300&fit=crop"
+             tabindex="0"
+             onmouseover="upDate(this)"
+             onmouseout="undo()"
+             onfocus="upDate(this)"
+             onblur="undo()">
+        
+        <img class="preview" 
+             alt="City skyline at night with lights" 
+             src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=400&h=300&fit=crop"
+             tabindex="0"
+             onmouseover="upDate(this)"
+             onmouseout="undo()"
+             onfocus="upDate(this)"
+             onblur="undo()">
+    </div>
+    <script src="gallery_javasript.js"></script>
     <footer>
         <p style="text-align: center; color: white; padding: 20px;">&copy; 2025 My Website. All rights reserved.</p>
     </footer>
