@@ -32,5 +32,46 @@ function undo() {
     imageDiv.innerHTML = "Hover over an image below to display here.";
 }
 
-// Optional: Add console log on page load to confirm script is running
+// This function adds tabindex and event listeners to all preview images
+function addEventListeners() {
+    // Log to console to verify the function is being called
+    console.log("addEventListeners function triggered on page load!");
+    
+    // Get all elements with the class "preview"
+    const images = document.querySelectorAll('.preview');
+    
+    // Loop through each image
+    for (let i = 0; i < images.length; i++) {
+        // Add tabindex attribute to make images keyboard accessible
+        images[i].setAttribute('tabindex', '0');
+        console.log(`Added tabindex to image ${i + 1}`);
+        
+        // Add onfocus event listener
+        images[i].addEventListener('focus', function() {
+            upDate(this);
+        });
+        
+        // Add onblur event listener
+        images[i].addEventListener('blur', function() {
+            undo();
+        });
+        
+        // Add onmouseover event listener
+        images[i].addEventListener('mouseover', function() {
+            upDate(this);
+        });
+        
+        // Add onmouseleave event listener
+        images[i].addEventListener('mouseleave', function() {
+            undo();
+        });
+    }
+    
+    console.log(`Event listeners added to ${images.length} images!`);
+}
+
+// Add onload event listener to run addEventListeners when page loads
+window.addEventListener('load', addEventListeners);
+
+// Optional: Add console log to confirm script is loaded
 console.log("Image gallery script loaded successfully!");
